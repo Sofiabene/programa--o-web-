@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="demo">
+            <h2>The XMLHttpRequest Object</h2>
+            <button type="button" ondblclick="loadDoc()">Change Content</button>
+        </div>
+
+        <script>
+            function loadDoc() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                };
+                xhttp.open("GET", "ajax_ifi.txt", true);  // Corrected the method and the file name
+                xhttp.send();  // Corrected method spelling
+            }
+        </script>
+    </body>
+</html>

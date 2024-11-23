@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2>JavaScript Validation</h2>
+        <script>
+            function validateForm() {
+                let x = document.forms["myForm"]["name"].value;  // Match name to the input field
+                if (x == "") {
+                    alert("Name must be filled out");
+                    return false;  // Prevent form submission
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myForm" action="action_page.php" onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="name">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

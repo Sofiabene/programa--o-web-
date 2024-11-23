@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teste JSON</title>
+    </head>
+    <body>
+        <button onclick="TestarJSON();">teste</button>
+    </body>
+    <script type="text/javascript">
+        function TesteAtributos() {
+            alert("O Primeiro valor é 2");
+            this.valor = 2; // Atributo público
+            alert("O segundo valor é desconhecido");
+            var valor2 = 4; // Atributo privado
+            this.total = this.valor + valor2; // Atributo público
+        }
+
+        function TestarJSON() {
+            var meuObj = new TesteAtributos(); // Momento de criação do objeto
+            alert("Valor: " + meuObj.valor + " O segundo Valor: " + meuObj.valor2);
+            alert("É igual a: " + meuObj.total);
+        }
+    </script>
+</html>
